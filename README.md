@@ -1,6 +1,6 @@
 # MATLAB_util
 
-miscellaneous
-math
-optim
-stats
+- miscellaneous
+- math
+- optim
+- stats
