@@ -2,5 +2,6 @@
 
 - miscellaneous
 - math
+- figure
 - optim
 - stats

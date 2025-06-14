@@ -16,6 +16,24 @@ fprintf(1,'WAPE : %f\n',Err.WAPE);
 ## hex2rgb
 It does exactly what the name says.
 
+## subr_struct_to_parse
+*Subroutine* to parse all the fields of struct variable.
+Usage:
+```MATLAB
+var.name = 'aiueo';
+var.val = 3;
+var.arr = [1,2,3];
+
+struct_to_parse = (variable name of struct);
+if_print_field = 1; %optional.
+run('subr_struct_to_parse.m');
+
+% then you can access the fields of struct_to_parse without (variable name of struct), e.g.
+disp(name); % 'aiueo'
+disp(arr); % [1,2,3]
+```
+
+
 ## delete_file_if_exist
 It does exactly what the name says.
 
