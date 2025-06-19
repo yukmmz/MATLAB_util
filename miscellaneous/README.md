@@ -34,6 +34,9 @@ disp(arr); % [1,2,3]
 ```
 
 
+## make_folder_if_not_exist
+It does exactly what the name says.
+
 ## delete_file_if_exist
 It does exactly what the name says.
 
@@ -43,7 +46,8 @@ It does exactly what the name says.
 ```
 Get the list of filepaths that matches filename_pattern, e.g. if `filename_pattern='\*.mat'`, find all file that match the pattern `fullfile(folderpath, '*.mat')`.
 
-
+## get_timestr_now
+Get the string of current time in format 'YYYYMMdd HHmm (ss)'.
 
 ## to be improved
 - make outout number variable in get_filepathlist

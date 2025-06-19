@@ -25,6 +25,39 @@ end
 Program to check the speed improvement is written at the end of the function file (comment-outed).
 
 
+
+
+
+## smspline_opt_recurse
+Smoothing spline with automatic prarameter adjustment.
+Recursively perform 
+```MATLAB
+f = fit(x,y,'smoothingspline','SmoothingParam',param)
+```
+adjusting SmoothingParam.
+
+Example code:
+
+```MATLAB
+% Smoothen y=y(x)
+errmax = 0.02; % tolerable error
+smoothing_params_init = linspace(1-1e-7,1,10); % initial guess of SmoothingParam. should be in [0, 1].
+maxloop = 10; % max number of param adjustment.
+
+out = smspline_opt_recurse(x,y,errmax,smoothing_params_init,maxloop);
+
+out.param_opt % optimal SmoothingParam
+out.x % same as input
+out.y_est % smoothened y
+out.err % mean(abs(y_est-y))/std(y)
+out.ill % ill message if optimization failed.
+out.fitobject % cfit object
+out.loopnum % number of loop taken
+```
+
+
+
+
 ## get_data_of_oscillation
 ```
 [ampdata,ofsdata,oscdata]=get_data_of_oscillation(x)
@@ -63,3 +96,11 @@ two dimentional version of finite_diff.
 
 ## to be improved
 - make finite_diff n-dimentioanl finite_diff function.
+
+
+
+
+
+
+
+
